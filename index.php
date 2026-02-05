@@ -22,11 +22,11 @@ $jobrolename_result = $jobrolename_stmt->fetchAll(PDO::FETCH_ASSOC);
             </thead>
 
             <tbody>
-                <?php foreach($jobrolename_result['jobrole_name'] as $row): ?>
+                <?php foreach($jobrolename_result as $row): ?>
                     <tr>
-                        <?php foreach($row as $value): ?>
-                            <td><?php echo htmlspecialchars($value); ?></td>
-                        <?php endforeach; ?>
+                        <?php //foreach($row as $value): ?>
+                            <td><?php echo htmlspecialchars($row['jobrole_name']); ?></td>
+                        <?php //endforeach; ?>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
