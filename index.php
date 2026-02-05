@@ -1,6 +1,6 @@
 <?php
 require "db.php";
-$staffname_stmt = $pdo->query("SELECT * FROM staff_name ORDER BY id DESC");
+$staffname_stmt = $pdo->query("SELECT * FROM staff_name ORDER BY staff_id DESC");
 $staffname_result = $staffname_stmt->fetchAll(PDO::FETCH_ASSOC);
 
 $jobrolename_stmt = $pdo->query("SELECT * FROM jobroles ORDER BY id DESC");
