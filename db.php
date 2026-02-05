@@ -6,7 +6,7 @@ if (!$databaseUrl) {
     die("DATABASE_URL is not set in Render Environment Variables!");
 }
 
-$dbparts = parse_url($databaseUrl);
+echo $dbparts = parse_url($databaseUrl); die;
 
 $host = $dbparts["host"];
 $port = $dbparts["port"];
