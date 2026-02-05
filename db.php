@@ -23,7 +23,7 @@ try {
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
     ]);
 
-    echo "PostgreSQL Connected Successfully!";
+    //echo "PostgreSQL Connected Successfully!";
 } catch (PDOException $e) {
     die("Connection failed: " . $e->getMessage());
 }
