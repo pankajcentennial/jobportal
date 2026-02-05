@@ -7,11 +7,11 @@ if (!$databaseUrl) {
 }
 
 $dbparts = parse_url($databaseUrl);
-print_r($dbparts);
-die;
+//print_r($dbparts);
+//die;
 
 $host = $dbparts["host"];
-$port = $dbparts["port"];
+$port = $dbparts["port"] ?? 5432;
 $user = $dbparts["user"];
 $pass = $dbparts["pass"];
 $dbname = ltrim($dbparts["path"], "/");
