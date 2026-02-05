@@ -13,6 +13,7 @@ $jobrolename_result = $jobrolename_stmt->fetchAll(PDO::FETCH_ASSOC);
         <table class="table table-bordered table-striped table-hover">
             <thead class="table-dark">
                 <tr>
+                    <th>Date</th>
                     <?php /*print_r($staffname_result); die;*/ if (!empty($staffname_result)): ?>
                         <?php foreach($staffname_result as $col): ?>
                             <th><?php echo htmlspecialchars($col['staffname']); ?></th>
@@ -24,9 +25,18 @@ $jobrolename_result = $jobrolename_stmt->fetchAll(PDO::FETCH_ASSOC);
             <tbody>
                
                     <tr>
-                         <?php foreach($jobrolename_result as $row): ?>
-                            <td><?php echo htmlspecialchars($row['jobrole_name']); ?></td>
-                        <?php endforeach; ?>
+                        <?php foreach($staffname_result as $col): ?>
+                               <td>
+                                <select>
+                                 <?php foreach($jobrolename_result as $row): ?>
+                                 <option>
+                                  <?php echo htmlspecialchars($row['jobrole_name']); ?>
+                                </option>
+                                <?php endforeach; ?>
+                                </select>
+                            </td>
+                                                
+                      <?php endforeach; ?>
                     </tr>
                 
             </tbody>
