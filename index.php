@@ -13,8 +13,8 @@ $jobrolename_result = $jobrolename_stmt->fetchAll(PDO::FETCH_ASSOC);
         <table class="table table-bordered table-striped table-hover">
             <thead class="table-dark">
                 <tr>
-                    <?php print_r($staffname_result); die; if (!empty($staffname_result)): ?>
-                        <?php foreach(array_keys($staffname_result['staff_name']) as $col): ?>
+                    <?php /*print_r($staffname_result); die;*/ if (!empty($staffname_result)): ?>
+                        <?php foreach(array_keys($staffname_result['staffname']) as $col): ?>
                             <th><?php echo htmlspecialchars($col); ?></th>
                         <?php endforeach; ?>
                     <?php endif; ?>
